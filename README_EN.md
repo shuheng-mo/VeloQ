@@ -1,8 +1,10 @@
 <div align="center">
 
+<img src="docs/assets/logos/VeloQ.png" alt="VeloQ Logo" width="200"/>
+
 # VeloQ
 
-> Turbocharge Python Quant Frameworks with C++ - Eliminate High-Frequency Market Data Processing Latency Bottlenecks
+> High-performance C++ market data middleware that accelerates feature engineering and AI inference for Python quant frameworks like vn.py, reducing latency from milliseconds to microseconds
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0--alpha-orange.svg)](https://github.com/yourusername/veloq/releases)
