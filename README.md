@@ -651,7 +651,7 @@ A: 你可以通过以下方式获取帮助：
 
 ## 许可证
 
-本项目基于 **MIT License** 开源 - 查看 [LICENSE](LICENSE) 文件了解详情。
+本项目基于 **GPL-3.0 license** 开源 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
 ---
 

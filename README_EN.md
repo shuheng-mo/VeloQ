@@ -651,7 +651,7 @@ Thanks to all developers who have contributed to this project!
 
 ## License
 
-This project is open-sourced under **MIT License** - see [LICENSE](LICENSE) file for details.
+This project is open-sourced under **GPL-3.0 license** - see [LICENSE](LICENSE) file for details.
 
 ---
 
