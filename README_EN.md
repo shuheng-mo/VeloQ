@@ -108,7 +108,7 @@ VeloQ aims to solve this pain point by leveraging C++'s performance advantages t
 
 ## System Architecture
 
-```text
+<!-- ```text
 ┌─────────────────────────────────────────────────────────┐
 │                    VeloQ Core (C++)                     │
 ├──────────────┬──────────────┬──────────────┬────────────┤
@@ -127,6 +127,40 @@ VeloQ aims to solve this pain point by leveraging C++'s performance advantages t
        │   Python Strategy Layer     │
        │  (vn.py / MiniQMT / ...)    │
        └─────────────────────────────┘
+``` -->
+```mermaid
+sequenceDiagram
+    autonumber
+    
+    participant M as 交易所 (CTP SimNow)
+    participant G as VeloQ::Gateway (SPI Thread)
+    participant Q as SPSC 无锁队列 (Lock-free)
+    participant E as VeloQ::FeatureEngine (Calc Thread)
+    participant AI as ONNX::InferencePatch
+    participant SHM as 共享内存 (Shared Memory)
+    participant P as Python 策略 (vn.py/QMT)
+
+    Note over M, G: 极速数据捕获层
+    M->>G: OnRtnDepthMarketData (原始 L2 字节流)
+    G->>G: 数据预清洗 & 内存对齐 (Struct Alignment)
+    
+    Note over G, Q: 生产者-消费者解耦 (降低抖动)
+    G->>Q: push() 原始 Tick
+    
+    Note over Q, E: 毫秒级特征计算
+    Q-->>E: pop() 
+    E->>E: 计算 OFI (订单流失衡) & 实时 VWAP
+    
+    Note over E, AI: AI 实时推断补丁
+    E->>AI: 喂入高维特征向量 (Vectorized Input)
+    AI-->>E: 返回预测概率 (Alpha Signal)
+    
+    Note over E, SHM: 零拷贝跨进程桥接
+    E->>SHM: Atomic Write (写入特征 + AI 信号)
+    
+    Note over SHM, P: 策略逻辑触发
+    SHM-->>P: Python 轮询/信号量触发
+    P->>P: 执行交易决策
 ```
 
 For detailed architecture design, see [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
