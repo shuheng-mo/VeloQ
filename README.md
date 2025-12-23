@@ -678,7 +678,7 @@ A: 你可以通过以下方式获取帮助：
 
 如果这个项目对你有帮助，请给它一个 Star！⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=shuheng-mo/veloq&type=Date)](https://star-history.com/#shuheng-mo/veloq&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=shuheng-mo/VeloQ&type=date&legend=top-left)](https://www.star-history.com/#shuheng-mo/VeloQ&type=date&legend=top-left)
 
 ---
 
