@@ -1,3 +1,17 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+out/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
 # Prerequisites
 *.d
 
@@ -13,6 +27,7 @@
 
 # Compiled Dynamic libraries
 *.so
+*.so.*
 *.dylib
 *.dll
 
@@ -30,6 +45,60 @@
 *.exe
 *.out
 *.app
+bin/
+*.x
 
-# Others
-prd.md
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Third-party libraries (to be manually downloaded)
+third_party/ctp/
+third_party/imgui/
+third_party/onnxruntime/
+third_party/spdlog/
+
+# Keep third_party README
+!third_party/README.md
+
+# Log files
+*.log
+logs/
+
+# CTP generated files
+flow/
+*.con
+
+# Performance profiling
+*.prof
+perf.data*
+callgrind.out.*
+
+# Test coverage
+*.gcov
+*.gcno
+*.gcda
+coverage/
+
+# Valgrind/sanitizer output
+vgcore.*
+*.dSYM/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+tmp/
+temp/
+
+# Config files (may contain sensitive info)
+config/*.ini
+config/*.cfg
+!config/*.example.ini
+!config/*.example.cfg
+
+.claude/
