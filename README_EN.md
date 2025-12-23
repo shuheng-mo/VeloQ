@@ -678,7 +678,7 @@ Thanks to the following projects/resources for inspiration and help:
 
 If this project helps you, please give it a Star! ⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/veloq&type=Date)](https://star-history.com/#yourusername/veloq&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=shuheng-mo/veloq&type=Date)](https://star-history.com/#shuheng-mo/veloq&Date)
 
 ---
 
