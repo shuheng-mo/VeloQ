@@ -1,5 +1,15 @@
 <div align="center">
 
+> ⚠️ **项目暂停通知**
+>
+> 非常抱歉，由于工作繁忙个人精力有限，本项目即日起**无限期停更**。
+>
+> 量化一直是我的热爱，VeloQ 也是我认真设计的项目。未来如果有缘，生活节奏稳定下来后，我一定会想办法继续下去。
+>
+> 感谢每一位 star 和关注这个项目的朋友。没能达到当初预期的状态，深感抱歉 🙏
+>
+> — Shuheng Mo
+
 <img src="docs/assets/logos/VeloQ.png" alt="VeloQ Logo" width="200"/>
 
 # VeloQ
